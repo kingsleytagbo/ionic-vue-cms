@@ -1,11 +1,17 @@
 <template>
-<h1> Footer ... </h1>
+<footer>
+            <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light">
+                <a class="navbar-brand mx-auto text-secondary" href="launchfeatures.com">
+                    <small>©&nbsp;All Rights Reserved ... Vue Blog - Kingsley Tagbo</small>
+                </a>
+            </nav>
+        </footer>
 </template>
 
 <script>
 
 export default {
-  name: "FooterItem",
+  name: "Footer",
   data() {
     return {
     };
