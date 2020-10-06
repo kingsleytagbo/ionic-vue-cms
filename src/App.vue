@@ -1,8 +1,8 @@
 <template>
   <div>
     <Header />
-    <img alt="Vue logo" src="./assets/logo.png" />
     <Home v-bind="$attrs" msg="Build Your Next App in Vue Multi-Platform" />
+        <img alt="Vue logo" src="./assets/logo.png" />
     <Footer />
   </div>
 </template>
