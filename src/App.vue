@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Home msg="Welcome to Vue CMS" />
+    <Home msg="Build Your Next App in Vue Multi-Platform" />
   </div>
 </template>
 
