@@ -42,6 +42,9 @@ export default {
   },
 
   methods: {
+      /*
+        Toggle for Collapsing or Expanding the Search Form
+      **/
       toggleSearch(){
           this.showSearch = !this.showSearch;
       }
