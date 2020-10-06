@@ -28,3 +28,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## Git Commands
 ### Check Vue Version
 npm list vue
+### Upgrade Vue 
+npm uninstall vue-cli -g
+npm install -g @vue/cli@latest
+vue upgrade
+vue --version
