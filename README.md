@@ -32,4 +32,6 @@ npm list vue
 npm uninstall vue-cli -g
 npm install -g @vue/cli@latest
 vue upgrade
+npm install vue@next
+vue upgrade --next
 vue --version
