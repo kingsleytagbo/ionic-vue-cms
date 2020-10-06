@@ -1,17 +1,22 @@
 <template>
-  <div id="app">
+  <div>
+    <Header />
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Home msg="Build Your Next App in Vue Multi-Platform" />
+    <Home v-bind="$attrs" msg="Build Your Next App in Vue Multi-Platform" />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Home from "./pages/Home.vue";
-
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 export default {
   name: "App",
   components: {
-    Home
+    Home,
+    Header,
+    Footer
   }
 };
 </script>
@@ -23,6 +28,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>

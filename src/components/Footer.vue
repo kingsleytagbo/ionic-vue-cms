@@ -2,7 +2,7 @@
 <footer>
             <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light">
                 <a class="navbar-brand mx-auto text-secondary" href="launchfeatures.com">
-                    <small>©&nbsp;All Rights Reserved ... Vue@3.0.0 Multi-Tenant - Kingsley Tagbo</small>
+                    <small>©&nbsp;All Rights Reserved ... Kingsley Tagbo</small>
                 </a>
             </nav>
         </footer>

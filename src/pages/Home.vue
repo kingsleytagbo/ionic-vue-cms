@@ -1,19 +1,18 @@
 <template>
-  <div class="hello">
+  <div class="container body-content bg-white text-dark">
     <h1>
-      Build Your Website in VueJS Multi Tenant CMS 
+      Build Your Next App / Website in <br />
+      VueJS Multi Tenant CMS 
     </h1>
-    <h3>Vue @2.6.12</h3>
-      <Footer />
+    <h3>Vue @3.0.0</h3>
   </div>
 </template>
 
 <script>
-import Footer from "@/components/Footer.vue";
+
 export default {
   name: "Home",
      components: {
-    Footer
   },
   props: {
     msg: String
