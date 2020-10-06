@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# vueblog
+# Vue Multi-Tenant CMS
 
 ## Project setup
 ```
@@ -25,3 +24,7 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 =======
 # ionic-vue-cms
+
+## Git Commands
+### Check Vue Version
+npm list vue
