@@ -1,5 +1,11 @@
 <template>
   <div class="container body-content bg-white text-dark">
+        <div class="dropdown-menu">
+      <span class="dropdown-item-text">Dropdown item text</span>
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#" active>Something else here</a>
+    </div>
     <h1>
       Build Your Next App / Website in <br />
       VueJS Multi Tenant CMS 
