@@ -2,9 +2,8 @@
 <div class="fixed-top sticky-top">
         <div class="navbar navbar-expand-md navbar-dark bg-dark">
             <a class="navbar-brand" href="/">
-                <!-- <img src="http://cdn1.launchfeatures.com/shared/images/favicon.ico" width="21" height="32" class="d-inline-block align-top" title="Home"> -->
                 <i class="fa fa-star-o"></i>
-                Vue @Next
+                Vue @Next Multi-Tenant
             </a>
 
             <!-- BEGIN SEARCH -->
