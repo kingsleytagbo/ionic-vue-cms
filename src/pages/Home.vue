@@ -1,36 +1,34 @@
 <template>
   <div class="container body-content bg-white text-dark">
     <h3>Vue Roadmap</h3>
-    <div class="custom-control custom-checkbox">
-      <div>
-          <input id="check1" type="checkbox" class="custom-control-input" checked="true">
-          <label class="custom-control-label" for="check1">Components</label>
+    <div>
+      <div style="width:100%;">
+          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Components</span><br />
       </div>
-      <div>
-          <input id="check2" type="checkbox" class="custom-control-input" disabled>
-          <label class="custom-control-label" for="check2">User Management</label>
+      
+      <div style="width:100%;">
+          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;User Management</span><br />
       </div>
-      <div>
-          <input id="check3" type="checkbox" class="custom-control-input">
-          <label class="custom-control-label" for="check3">Roles & Permissions</label>
+
+      <div style="width:100%;">
+          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Roles & Permissions</span><br />
       </div>
-      <div>
-          <input id="check4" type="checkbox" class="custom-control-input">
-          <label class="custom-control-label" for="check4">Authentication & Authorization</label>
+
+      <div style="width:100%;">
+          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Authentication & Authorization</span><br />
       </div>
-      <div>
-          <input id="check5" type="checkbox" class="custom-control-input">
-          <label class="custom-control-label" for="check5">Searching</label>
+
+      <div style="width:100%;">
+          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Searching</span><br />
       </div>
-      <div>
-          <input id="check6" type="checkbox" class="custom-control-input">
-          <label class="custom-control-label" for="check6">Sorting</label>
+
+       <div style="width:100%;">
+          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Filtering</span><br />
       </div>
-      <div>
-          <input id="check7" type="checkbox" class="custom-control-input">
-          <label class="custom-control-label" for="check7">Filtering</label>
+       <div style="width:100%;">
+          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Sorting</span><br />
       </div>
-    </div>
+  </div>
   </div>
 </template>
 
