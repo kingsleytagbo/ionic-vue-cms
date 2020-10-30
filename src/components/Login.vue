@@ -63,10 +63,10 @@ export default {
   methods: {
     loginUser() {
       const user = {
-        email: this.email,
+        username: this.email,
         password: this.password
       };
-      post('/loginUser', user).then((result) => {
+      post('/login', user).then((result) => {
                console.log({ user: user, post: post, result: result });
       });
       this.submitted = true;
