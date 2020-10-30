@@ -1,6 +1,6 @@
 <template>
   <div class="vue-template">
-    <div v-if="!submitted">
+    <div v-if="!authenticated">
       <form>
         <h3>Log In</h3>
 
@@ -44,13 +44,13 @@
 </template>
 
 <script type="ts">
-import post from '../services/http';
+import post from "../services/http";
 
 export default {
   name: "Login",
   data() {
     return {
-      submitted: false,
+      authenticated: false,
       email: "",
       password: ""
     };
@@ -62,14 +62,21 @@ export default {
 
   methods: {
     loginUser() {
-      const user = {
-        username: this.email,
-        password: this.password
+      const body = {
+        login: {
+          username: this.email,
+          password: this.password
+        }
       };
-      post('/login', user).then((result) => {
-               console.log({ user: user, post: post, result: result });
+      post("/login", body).then(result => {
+          if(result && result.authenticated){
+                    this.authenticated = true;
+          }
+          else{
+              this.authenticated = false;
+          }
+        console.log({ body: body, post: post, result: result });
       });
-      this.submitted = true;
     }
   }
 };
