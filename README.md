@@ -1,5 +1,9 @@
 # Vue Multi-Tenant CMS
 
+## References
+### Create Login Signup UI Screens in Vue.js 2|3 with Bootstrap 4
+https://www.positronx.io/create-login-signup-ui-screens-in-vue-js-with-bootstrap/
+
 ## Project setup
 ```
 npm install

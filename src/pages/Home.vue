@@ -1,6 +1,7 @@
 <template>
   <div class="container body-content bg-white text-dark">
     <h3>Vue Roadmap</h3>
+    <Login />
     <div>
       <div style="width:100%;">
           <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Components</span><br />
@@ -33,10 +34,11 @@
 </template>
 
 <script>
-
+import Login from "@/components/Login.vue";
 export default {
   name: "Home",
-     components: {
+  components: {
+    Login
   },
   props: {
     msg: String
