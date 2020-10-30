@@ -1,32 +1,26 @@
 <template>
-<footer>
-            <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light">
-                <a class="navbar-brand mx-auto text-secondary" href="launchfeatures.com">
-                    <small>©&nbsp;All Rights Reserved ... Kingsley Tagbo</small>
-                </a>
-            </nav>
-        </footer>
+  <footer>
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light">
+      <a class="navbar-brand mx-auto text-secondary" href="launchfeatures.com">
+        <small>©&nbsp;All Rights Reserved ... Kingsley Tagbo</small>
+      </a>
+    </nav>
+  </footer>
 </template>
 
 <script>
-
 export default {
   name: "Footer",
   data() {
-    return {
-    };
+    return {};
   },
 
-  mounted() {
-  },
+  mounted() {},
 
-  computed: {
-  },
+  computed: {},
 
-  methods: {
-  }
+  methods: {}
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -4,32 +4,47 @@
     <Login />
     <div>
       <div style="width:100%;">
-          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Components</span><br />
-      </div>
-      
-      <div style="width:100%;">
-          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;User Management</span><br />
+        <span style="float:left;"
+          ><i class="fa fa-check fa-1x"></i>&nbsp;Components</span
+        ><br />
       </div>
 
       <div style="width:100%;">
-          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Roles & Permissions</span><br />
+        <span style="float:left;"
+          ><i class="fa fa-check fa-1x"></i>&nbsp;User Management</span
+        ><br />
       </div>
 
       <div style="width:100%;">
-          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Authentication & Authorization</span><br />
+        <span style="float:left;"
+          ><i class="fa fa-check fa-1x"></i>&nbsp;Roles & Permissions</span
+        ><br />
       </div>
 
       <div style="width:100%;">
-          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Searching</span><br />
+        <span style="float:left;"
+          ><i class="fa fa-check fa-1x"></i>&nbsp;Authentication &
+          Authorization</span
+        ><br />
       </div>
 
-       <div style="width:100%;">
-          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Filtering</span><br />
+      <div style="width:100%;">
+        <span style="float:left;"
+          ><i class="fa fa-check fa-1x"></i>&nbsp;Searching</span
+        ><br />
       </div>
-       <div style="width:100%;">
-          <span style="float:left;"><i class="fa fa-check fa-1x"></i>&nbsp;Sorting</span><br />
+
+      <div style="width:100%;">
+        <span style="float:left;"
+          ><i class="fa fa-check fa-1x"></i>&nbsp;Filtering</span
+        ><br />
       </div>
-  </div>
+      <div style="width:100%;">
+        <span style="float:left;"
+          ><i class="fa fa-check fa-1x"></i>&nbsp;Sorting</span
+        ><br />
+      </div>
+    </div>
   </div>
 </template>
 

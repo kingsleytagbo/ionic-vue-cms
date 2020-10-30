@@ -6,6 +6,8 @@ https://www.positronx.io/create-login-signup-ui-screens-in-vue-js-with-bootstrap
 
 
 ## Project setup
+## Add Typescript
+vue add typescript
 ```
 npm install
 ```

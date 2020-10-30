@@ -1,24 +1,17 @@
 <template>
-  <div>
-    <Header />
-    <Home v-bind="$attrs" msg="Build Your Next App in Vue Multi-Platform" />
-        <img alt="Vue logo" src="./assets/logo.png" />
-    <Footer />
-  </div>
+  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
 </template>
 
-<script>
-import Home from "./pages/Home.vue";
-import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
-export default {
-  name: "App",
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+import HelloWorld from "./components/HelloWorld.vue";
+
+@Options({
   components: {
-    Home,
-    Header,
-    Footer
+    HelloWorld
   }
-};
+})
+export default class App extends Vue {}
 </script>
 
 <style>
@@ -28,6 +21,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 0px;
+  margin-top: 60px;
 }
 </style>
