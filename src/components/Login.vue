@@ -1,5 +1,5 @@
 <template>
-    <div class="vue-tempalte">
+    <div class="vue-template">
         <div v-if="!submitted"> 
                 <form>
                     <h3>Log In</h3>
@@ -25,10 +25,13 @@
         <div v-else>
             <h4>You are logged-in!</h4>
         </div>
+            <post />
     </div>
 </template>
 
-<script>
+<script type="ts">
+import post from '../services/http';
+
 export default {
   name: "Login",
   data() {
