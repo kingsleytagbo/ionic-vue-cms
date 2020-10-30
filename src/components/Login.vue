@@ -66,7 +66,9 @@ export default {
         email: this.email,
         password: this.password
       };
-      console.log({ user: user, post: post });
+      post('/loginUser', user).then((result) => {
+               console.log({ user: user, post: post, result: result });
+      });
       this.submitted = true;
     }
   }
