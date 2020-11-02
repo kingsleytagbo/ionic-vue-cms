@@ -1,6 +1,6 @@
 <template>
   <div class="list row">
-    <div class="col-md-8">
+    <div class="col-md-12">
       <div class="input-group mb-3">
         <input
           type="text"
@@ -20,8 +20,16 @@
       </div>
     </div>
 
+          <a
+          class="btn btn-block btn-outline-info"
+          @click="addUser()"
+        >
+          Add
+        </a>
+
+  
   <!-- BEGIN EDIT USER -->
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div v-if="currentUser">
         <h4>Manage User</h4>
         <div>
@@ -46,7 +54,7 @@
     </div>
     <!-- END EDIT USER -->
 
-        <div class="col-md-6">
+        <div class="col-md-12">
       <h2>Users</h2>
       <ul class="list-group">
         <li
@@ -59,7 +67,6 @@
           {{ user.user_nicename }} : {{ user.user_email }}
         </li>
       </ul>
-
       <button class="m-3 btn btn-sm btn-danger" @click="removeAllUsers">
         Remove All
       </button>
@@ -91,8 +98,15 @@ export default {
           console.log(e);
         });
     },
-    editUser(user){
-     this.$router.push({ name: 'edituser', id: user.id, params: {id: user.id.toString(), user: JSON.stringify(user) } })
+    addUser(){
+        this.$router.push({ path: "/users/adduser" });
+    },
+    editUser(user) {
+      this.$router.push({
+        name: "edituser",
+        id: user.id,
+        params: { id: user.id.toString(), user: JSON.stringify(user) }
+      });
     },
     refreshList() {
       this.retrieveUsers();
