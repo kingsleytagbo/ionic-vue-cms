@@ -32,9 +32,6 @@
           Sign In
         </button>
 
-        <p class="forgot-password text-right mt-2 mb-4">
-          <router-link to="/forgot-password">Forgot password ?</router-link>
-        </p>
       </form>
     </div>
     <div v-else>

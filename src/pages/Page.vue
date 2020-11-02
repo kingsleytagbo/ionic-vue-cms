@@ -1,0 +1,22 @@
+<template>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/login">Login</router-link>
+    </div>
+    <router-view />
+  </div>
+</template>
+<script>
+export default {
+  name: "Page",
+  components: {
+  },
+  props: {
+  }
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>

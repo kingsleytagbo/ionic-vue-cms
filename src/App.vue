@@ -1,14 +1,14 @@
 <template>
-  <Home />
+  <Page />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import Home from "./pages/Home.vue";
+import Page from "./pages/Page.vue";
 
 @Options({
   components: {
-    Home
+    Page
   }
 })
 export default class App extends Vue {}

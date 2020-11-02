@@ -1,7 +1,6 @@
 <template>
   <div class="container body-content bg-white text-dark">
     <h3>Vue Roadmap</h3>
-    <Login />
     <div>
       <div style="width:100%;">
         <span style="float:left;"
@@ -49,11 +48,9 @@
 </template>
 
 <script>
-import Login from "@/components/Login.vue";
 export default {
-  name: "Home",
+  name: "HomePage",
   components: {
-    Login
   },
   props: {
     msg: String
