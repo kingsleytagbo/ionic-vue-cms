@@ -20,13 +20,18 @@ const routes = [
     component: ListUsersPage,
   },
   {
-    path: "/users/edit/:id",
+    path: "/users/edituser/:id",
     name: "edituser",
     component: () => import("@/pages/users/EditUser.vue"),
     params: (route: any) => ({
       user: route.params.user
     })
   },
+  {
+    path: "/users/adduser",
+    name: "adduser",
+    component: () => import("@/pages/users/AddUser.vue"),
+  }
 ];
 
 const router = createRouter({

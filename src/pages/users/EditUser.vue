@@ -1,5 +1,5 @@
 <template>
-  <div v-if="currentUser" class="edit-form">
+  <div v-if="currentUser" class="editform">
     <h2>Edit User</h2>
     <form>
       <div class="form-group">
