@@ -72,7 +72,7 @@ export default {
           else{
               this.authenticated = false;
           }
-        console.log({ body: body, post: post, result: result });
+        console.log({ body: body, post: Api, result: result });
       });
     }
   }

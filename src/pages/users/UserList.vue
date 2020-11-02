@@ -100,7 +100,7 @@ export default {
       this.currentIndex = index;
     },
     removeAllTutorials() {
-      TutorialDataService.deleteAll()
+      Api.deleteAll()
         .then(response => {
           console.log(response );
           this.refreshList();
@@ -111,7 +111,7 @@ export default {
     },
 
     searchTitle() {
-      TutorialDataService.findByTitle(this.title)
+      Api.findByTitle(this.title)
         .then(response => {
           this.tutorials = response;
           console.log(response);
