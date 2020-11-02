@@ -85,14 +85,13 @@ export default {
       Api.getUsers(true)
         .then(response => {
           this.users = response;
-          console.log(response);
+          // console.log(response);
         })
         .catch(e => {
           console.log(e);
         });
     },
     editUser(user){
-      console.log(user);
      this.$router.push({ name: 'edituser', id: user.id, params: {id: user.id.toString(), user: JSON.stringify(user) } })
     },
     refreshList() {

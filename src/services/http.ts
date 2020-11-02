@@ -13,8 +13,7 @@ class Api{
       headers: headers,
       body: JSON.stringify(body)
     });
-
-    console.log({ result: result, body: result.body });
+    // console.log({ result: result, body: result.body });
 
     if (result.ok) {
       const response = result.json();

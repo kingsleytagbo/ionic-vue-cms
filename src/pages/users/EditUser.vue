@@ -71,6 +71,10 @@ export default {
   },
   methods: {
     getUser(user) {
+      if (!user) {
+        this.$router.push({ path: "/users/" });
+        return;
+      }
       this.currentUser = JSON.parse(user);
     },
     updatePublished(status) {
@@ -113,7 +117,7 @@ export default {
   mounted() {
     this.message = "";
     this.getUser(this.$route.params.user);
-    console.log({id: this.$route.params.id, user: this.currentUser});
+    // console.log({id: this.$route.params.id, user: this.currentUser});
   }
 };
 </script>

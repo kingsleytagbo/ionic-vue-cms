@@ -1,9 +1,7 @@
 <template>
   <div>
-    <Header />
     <h3>Login ...</h3>
     <Login />
-    <Footer />
   </div>
 </template>
 

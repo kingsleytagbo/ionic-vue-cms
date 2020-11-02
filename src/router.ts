@@ -20,7 +20,7 @@ const routes = [
     component: ListUsersPage,
   },
   {
-    path: "/users/:id",
+    path: "/users/edit/:id",
     name: "edituser",
     component: () => import("@/pages/users/EditUser.vue"),
     params: (route: any) => ({
