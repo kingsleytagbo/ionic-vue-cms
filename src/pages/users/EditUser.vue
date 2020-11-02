@@ -30,24 +30,24 @@
     <button
       class="badge badge-primary mr-2"
       v-if="currentUser.published"
-      @click="updatePublished(false)"
+      @click="updateUser()"
     >
-      UnPublish
+      Save
     </button>
     <button
       v-else
       class="badge badge-primary mr-2"
       @click="updatePublished(true)"
     >
-      Publish
+      Save
     </button>
 
-    <button class="badge badge-danger mr-2" @click="deleteUser">
+    <button type="submit" class="badge badge-warning mr-2" @click="cancelUser">
+      Cancel
+    </button>
+
+    <button disabled class="badge badge-danger mr-2" @click="deleteUser">
       Delete
-    </button>
-
-    <button type="submit" class="badge badge-success" @click="updateUser">
-      Update
     </button>
 
     <p>{{ message }}</p>
@@ -77,21 +77,9 @@ export default {
       }
       this.currentUser = JSON.parse(user);
     },
-    updatePublished(status) {
-      var data = {
-        id: this.currentUser.id,
-        title: this.currentUser.title,
-        description: this.currentUser.description,
-        published: status
-      };
-      Api.update(this.currentUser.id, data)
-        .then(response => {
-          this.currentUser.published = status;
-          console.log(response);
-        })
-        .catch(e => {
-          console.log(e);
-        });
+    cancelUser() {
+        this.$router.push({ path: "/users/" });
+        return;
     },
     updateUser() {
       Api.update(this.currentUser.id, this.currentUser)
