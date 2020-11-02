@@ -41,7 +41,7 @@
 </template>
 
 <script type="ts">
-import post from "../services/http";
+import Api from "../services/http";
 
 export default {
   name: "Login",
@@ -65,7 +65,7 @@ export default {
           password: this.password
         }
       };
-      post("/login", body).then(result => {
+      Api.post("/login", body).then(result => {
           if(result && result.authenticated){
                     this.authenticated = true;
           }
