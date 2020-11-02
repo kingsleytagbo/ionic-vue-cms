@@ -30,14 +30,14 @@
     <button
       class="badge badge-primary mr-2"
       v-if="currentUser.published"
-      @click="updateUser()"
+      @click="createUser()"
     >
       Save
     </button>
     <button
       v-else
       class="badge badge-primary mr-2"
-      @click="updatePublished(true)"
+      @click="createUser()"
     >
       Save
     </button>
@@ -78,11 +78,12 @@ export default {
         this.$router.push({ path: "/users/" });
         return;
     },
-    updateUser() {
-      Api.update(this.currentUser.id, this.currentUser)
+    createUser() {
+      Api.createUser(this.currentUser.user_nicename, this.currentUser.user_email, true)
         .then(response => {
           console.log(response);
           this.message = "The User was created successfully!";
+          this.cancelUser();
         })
         .catch(e => {
           console.log(e);
