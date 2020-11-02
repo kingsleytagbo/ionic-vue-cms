@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import HomePage from "@/pages/Home.vue";
 import LoginPage from "@/pages/Login.vue";
-import UserListPage from "@/pages/users/UserList.vue";
+import ListUsersPage from "@/pages/users/ListUsers.vue";
 
 const routes = [
   {
@@ -17,8 +17,16 @@ const routes = [
   {
     path: "/users",
     name: "users",
-    component: UserListPage,
-  }
+    component: ListUsersPage,
+  },
+  {
+    path: "/users/:id",
+    name: "edituser",
+    component: () => import("@/pages/users/EditUser.vue"),
+    params: (route: any) => ({
+      user: route.params.user
+    })
+  },
 ];
 
 const router = createRouter({

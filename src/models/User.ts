@@ -1,5 +1,5 @@
 class User{
-    public ID :number;
+    public id :number;
     public user_login : string;
     public user_email:string;
     public display_name:string;

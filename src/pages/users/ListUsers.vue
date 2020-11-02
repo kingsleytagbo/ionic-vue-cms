@@ -19,58 +19,59 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <h2>Users</h2>
-      <ul class="list-group">
-        <li
-          class="list-group-item"
-          :class="{ active: index == currentIndex }"
-          v-for="(tutorial, index) in tutorials"
-          :key="index"
-          @click="setActiveTutorial(tutorial, index)"
-        >
-          {{ tutorial.title }}
-        </li>
-      </ul>
 
-      <button class="m-3 btn btn-sm btn-danger" @click="removeAllTutorials">
-        Remove All
-      </button>
-    </div>
+  <!-- BEGIN EDIT USER -->
     <div class="col-md-6">
-      <div v-if="currentTutorial">
-        <h4>Tutorial</h4>
+      <div v-if="currentUser">
+        <h4>Manage User</h4>
         <div>
-          <label><strong>Title:</strong></label> {{ currentTutorial.title }}
+          <label><strong>Username:</strong></label> {{ currentUser.user_nicename }}
         </div>
         <div>
-          <label><strong>Description:</strong></label>
-          {{ currentTutorial.description }}
-        </div>
-        <div>
-          <label><strong>Status:</strong></label>
-          {{ currentTutorial.published ? "Published" : "Pending" }}
+          <label><strong>Email:</strong></label>
+          {{ currentUser.user_email }}
         </div>
 
         <a
-          class="badge badge-warning"
-          :href="'/tutorials/' + currentTutorial.id"
+          class="btn btn-default btn-block badge badge-warning"
+          @click="editUser(currentUser)"
         >
           Edit
         </a>
       </div>
       <div v-else>
         <br />
-        <p>Please click on a Tutorial...</p>
+        <p>Please click on a User...</p>
       </div>
     </div>
+    <!-- END EDIT USER -->
+
+        <div class="col-md-6">
+      <h2>Users</h2>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          :class="{ active: index == currentIndex }"
+          v-for="(user, index) in users"
+          :key="index"
+          @click="setActiveUser(user, index)"
+        >
+          {{ user.user_nicename }} : {{ user.user_email }}
+        </li>
+      </ul>
+
+      <button class="m-3 btn btn-sm btn-danger" @click="removeAllUsers">
+        Remove All
+      </button>
+    </div>
+    
   </div>
 </template>
 
 <script>
 import Api from "../../services/http";
 export default {
-  name: "UserListPage",
+  name: "ListUsersPage",
   data() {
     return {
       users: [],
@@ -80,7 +81,7 @@ export default {
     };
   },
   methods: {
-    retrieveTutorials() {
+    retrieveUsers() {
       Api.getUsers(true)
         .then(response => {
           this.users = response;
@@ -90,19 +91,23 @@ export default {
           console.log(e);
         });
     },
+    editUser(user){
+      console.log(user);
+     this.$router.push({ name: 'edituser', id: user.id, params: {id: user.id.toString(), user: JSON.stringify(user) } })
+    },
     refreshList() {
-      this.retrieveTutorials();
-      this.currentTutorial = null;
+      this.retrieveUsers();
+      this.currentUser = null;
       this.currentIndex = -1;
     },
-    setActiveTutorial(tutorial, index) {
-      this.currentTutorial = tutorial;
+    setActiveUser(User, index) {
+      this.currentUser = User;
       this.currentIndex = index;
     },
-    removeAllTutorials() {
+    removeAllUsers() {
       Api.deleteAll()
         .then(response => {
-          console.log(response );
+          console.log(response);
           this.refreshList();
         })
         .catch(e => {
@@ -113,7 +118,7 @@ export default {
     searchTitle() {
       Api.findByTitle(this.title)
         .then(response => {
-          this.tutorials = response;
+          this.Users = response;
           console.log(response);
         })
         .catch(e => {
@@ -122,7 +127,7 @@ export default {
     }
   },
   mounted() {
-    this.retrieveTutorials();
+    this.retrieveUsers();
   }
 };
 </script>
