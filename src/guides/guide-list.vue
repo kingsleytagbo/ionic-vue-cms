@@ -8,7 +8,7 @@
 </template>
 
 <script type="ts">
-import Api from "../../services/http";
+/* import Api from "../services/http"; */
 export default {
   name: "list-user",
   data() {

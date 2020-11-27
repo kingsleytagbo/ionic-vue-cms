@@ -10,9 +10,9 @@
 </template>
 
 <script type="ts">
-import Api from "../../services/http";
+import Api from "../services/http";
 export default {
-  name: 'subscribe-user',
+  name: 'add-user',
   data() {
     return {
       user: { email: '' }

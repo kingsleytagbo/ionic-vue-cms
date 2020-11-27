@@ -33,10 +33,16 @@ const routes = [
     component: () => import("@/pages/users/AddUser.vue"),
   },
   {
-    path: "/guides/guide1",
-    name: "guide1",
-    component: () => import("@/guides/gude1.vue"),
+    path: "/guides/add",
+    name: "guides-add",
+    component: () => import("@/guides/guide-add.vue"),
   }
+  ,
+  {
+    path: "/guides/list",
+    name: "guides-list",
+    component: () => import("@/guides/guide-list.vue"),
+  },
 ];
 
 const router = createRouter({
