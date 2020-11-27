@@ -10,7 +10,7 @@
 </template>
 
 <script type="ts">
-/* import Api from "../services/http"; */
+import Api from "../services/http"; 
 export default {
   name: 'add-user',
   data() {
@@ -20,6 +20,7 @@ export default {
   },
   methods: {
     subscribe() {
+      /* replace with a valid api call to subscribe a user */
       Api.post('/subscribe', this.user).then(result => {
         console.log({ result: result });
       });
