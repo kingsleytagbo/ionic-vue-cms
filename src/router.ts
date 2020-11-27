@@ -31,6 +31,11 @@ const routes = [
     path: "/users/adduser",
     name: "adduser",
     component: () => import("@/pages/users/AddUser.vue"),
+  },
+  {
+    path: "/guides/guide1",
+    name: "guide1",
+    component: () => import("@/guides/gude1.vue"),
   }
 ];
 

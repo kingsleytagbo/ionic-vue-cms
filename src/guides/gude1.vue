@@ -10,9 +10,9 @@
 </template>
 
 <script type="ts">
-import Api from "../services/http";
+
 export default {
-  name: "add-user",
+  name: "subscribe-user",
   data() {
     return {
       user: { email: "" }
@@ -20,9 +20,13 @@ export default {
   },
   methods: {
     subscribe() {
+      alert(this.user.email)
+      return;
+      /*
       Api.post("/subscribe", this.user).then(result => {
         console.log({ result: result });
       });
+      */
     }
   },
   mounted() {},
