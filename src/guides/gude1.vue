@@ -12,21 +12,17 @@
 <script type="ts">
 
 export default {
-  name: "subscribe-user",
+  name: 'subscribe-user',
   data() {
     return {
-      user: { email: "" }
+      user: { email: '' }
     };
   },
   methods: {
     subscribe() {
-      alert(this.user.email)
-      return;
-      /*
-      Api.post("/subscribe", this.user).then(result => {
+      Api.post('/subscribe', this.user).then(result => {
         console.log({ result: result });
       });
-      */
     }
   },
   mounted() {},
