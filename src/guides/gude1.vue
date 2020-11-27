@@ -10,7 +10,6 @@
 </template>
 
 <script type="ts">
-
 export default {
   name: 'subscribe-user',
   data() {
