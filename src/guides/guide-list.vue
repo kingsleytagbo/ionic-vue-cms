@@ -1,7 +1,7 @@
 <template>
 <div>
 <h6>List Users</h6>
-  <ul >
+  <ul>
     <li v-for="user in users" :key="user.id">email: {{ user.email }} </li> 
   </ul>
   </div>

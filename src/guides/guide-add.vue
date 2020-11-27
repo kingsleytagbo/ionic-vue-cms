@@ -10,7 +10,7 @@
 </template>
 
 <script type="ts">
-import Api from "../services/http";
+/* import Api from "../services/http"; */
 export default {
   name: 'add-user',
   data() {
