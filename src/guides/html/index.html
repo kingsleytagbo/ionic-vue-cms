@@ -11,14 +11,19 @@
             </p>
 
         </div>
+        <features></features>
     </div>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
     <script>
         var vueApp = new Vue({
         el: '#app',
         data: {
             title: 'Vue UI Dev Kit',
             message: ''
+        },
+        components: {
+          'features': httpVueLoader('/src/guides/html/components/features.vue')
         }
     })
 </script>
