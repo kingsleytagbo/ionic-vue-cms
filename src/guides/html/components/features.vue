@@ -1,5 +1,5 @@
 <template>
-  <ol><li>Vue Without Webpack or Node</li></ol>
+  <ol><li>Vue from your html/js. No node.js, no build step, no webpack.</li></ol>
 </template>
 
 <script>
@@ -11,7 +11,7 @@ module.exports = {
 </script>
 
 <style scoped>
-  span {
+  li {
     background-color: yellow;
   }
 </style>
