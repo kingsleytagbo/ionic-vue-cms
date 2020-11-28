@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id=app>
+        <div>
+            <h1>{{ welcome }}</h1>
+            <br>
+            <p>
+                Type Something: 
+                <input v-model="something" autofocus />
+            </p>
+            <br>
+            {{ something }}
+        </div>
+    </div>
+    <script>
+        var vueApp = new Vue({
+        el: '#app',
+        data: {
+            welcome: 'Welcome To Vue.js!',
+            something: ''
+        }
+    })
+</script>
+</body>
+</html>
