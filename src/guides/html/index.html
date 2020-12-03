@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div id=app>
+        <div>
+            <h1>/index.html - {{ title }}</h1>
+            <p><span>{{ message }}</span> <input v-model="message" placeholder="Enter / Type Here..." autofocus />
+            </p>
+            <h6>... /src/guides/html/index.html</h6>
+        </div>
+        <features></features>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+    <script>
+        var vueApp = new Vue({
+        el: '#app',
+        data: {
+            title: 'Vue UI Dev Kit',
+            message: ''
+        },
+        components: {
+          'features': httpVueLoader('/src/guides/html/components/features.vue')
+        }
+    })
+</script>
+</body>
+</html>
