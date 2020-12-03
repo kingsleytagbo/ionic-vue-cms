@@ -49,7 +49,7 @@
       </div>
       <div v-else>
         <br />
-        <p>Please click on a User...</p>
+        <p>Please click on a User...{{ getUser.user_nicename }}</p>
       </div>
     </div>
     <!-- END EDIT USER -->
@@ -77,6 +77,7 @@
 
 <script>
 import Api from "../../services/http";
+import User from '@/models/User';
 export default {
   name: "ListUsersPage",
   data() {
@@ -92,7 +93,10 @@ export default {
       Api.getUsers(true)
         .then(response => {
           this.users = response;
-          // console.log(response);
+          if(this.users && this.users.length > 0){
+          this.$store.dispatch('setUser', this.users[0]);
+          }
+          console.log(this.users[0]);
         })
         .catch(e => {
           console.log(e);
@@ -141,6 +145,13 @@ export default {
   },
   mounted() {
     this.retrieveUsers();
+  },
+  computed:{
+    getUser(){
+      let user = this.$store.state.user;
+      if (!user) user = new User('', '');
+      return user;
+    }
   }
 };
 </script>

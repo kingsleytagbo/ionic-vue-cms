@@ -20,9 +20,11 @@ export default {
   },
   methods: {
     subscribe() {
+      /*
       Api.post('/subscribe', this.user).then(result => {
         console.log({ result: result });
       });
+      */
     }
   },
   mounted() {},
