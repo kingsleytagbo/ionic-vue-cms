@@ -1,7 +1,11 @@
 import Api from '../services/http';
+import User from '../models/User';
+import Authentication from '../models/Authentication';
 
 const state = {
-    users: []
+    users: [],
+    user:null,
+    authentication: Authentication
 }
 
 const getters = {
@@ -14,18 +18,36 @@ const actions = {
     GET_USERS: async ({ state, commit }: any) => {
         Api.getUsers(true)
             .then(response => {
-                console.log(response)
-                commit('SET_USERS', response)
+                commit('SET_USERS', response);
             })
             .catch(e => {
                 console.log(e);
             });
+    },
+
+    LOGIN_USER: async ({ state, commit}: any, user: User ) => {
+        const body = {
+            login: {
+              username: user.user_nicename,
+              password: user.user_pass
+            }
+          };
+        Api.post("/login", body).then(result => {
+            const authentication = (result && result.authenticated)
+            ? new Authentication(user.user_nicename, true)
+            : null;
+            commit('SET_AUTHENTICATION', authentication);
+        });
     }
 }
 
 const mutations = {
     SET_USERS(state: any, users: any) {
         state.users = users;
+    }
+    ,SET_AUTHENTICATION(state: any, authentication: any) {
+        state.authentication = authentication;
+        console.log({ SET_AUTHENTICATION: authentication});
     }
 }
 
