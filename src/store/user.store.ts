@@ -3,8 +3,8 @@ import User from '../models/User';
 import Authentication from '../models/Authentication';
 
 const state = {
-    users: [],
-    user:null,
+    users: Array<User>(),
+    user:User,
     authentication: Authentication
 }
 

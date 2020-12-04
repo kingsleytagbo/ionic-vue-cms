@@ -90,7 +90,8 @@ export default {
     };
   },
   methods: {
-    retrieveUsers() {
+    ...mapActions(['USERS/GET_USERS'])
+    ,retrieveUsers() {
           this.$store.dispatch('USERS/GET_USERS');
       /*
       Api.getUsers(true)
@@ -145,8 +146,8 @@ export default {
         .catch(e => {
           console.log(e);
         });
-    },
-     ...mapActions(['USERS/GET_USERS'])
+    }
+
   },
   mounted() {
     this.retrieveUsers();
