@@ -1,6 +1,6 @@
 <template>
   <div class="container body-content bg-white text-dark">
-    <h3>Vue Roadmap: increase:{{increase}}</h3>
+    <h3>Vue Roadmap: </h3>
     <div>
       <div style="width:100%;">
         <span style="float:left;"
@@ -47,7 +47,7 @@
   </div>
 </template>
 
-<script>
+<script type="ts">
 export default {
   name: "HomePage",
   components: {
@@ -56,12 +56,8 @@ export default {
     msg: String
   },
   computed: {
-    increase(){
-      return this.$store.state.index;
-    }
   },
-    mounted() {
-     //this.$store.dispatch('increase')
+  mounted() {
   }
 };
 </script>

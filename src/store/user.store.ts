@@ -37,8 +37,14 @@ const actions = {
             ? new Authentication(user.user_nicename, true)
             : null;
             commit('SET_AUTHENTICATION', authentication);
+            console.log({ LOGIN_USER: result, user: user});
         });
-    }
+    },
+
+    LOGOUT_USER: async ({ state, commit }: any) => {
+        console.log({ LOGOUT_USER: state});
+        commit('SET_AUTHENTICATION', null);
+    },
 }
 
 const mutations = {
@@ -47,7 +53,6 @@ const mutations = {
     }
     ,SET_AUTHENTICATION(state: any, authentication: any) {
         state.authentication = authentication;
-        console.log({ SET_AUTHENTICATION: authentication});
     }
 }
 
