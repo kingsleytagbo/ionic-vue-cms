@@ -78,6 +78,7 @@
 <script>
 import Api from "../../services/http";
 import User from '@/models/User';
+import {  mapActions } from 'vuex';
 export default {
   name: "ListUsersPage",
   data() {
@@ -94,9 +95,9 @@ export default {
         .then(response => {
           this.users = response;
           if(this.users && this.users.length > 0){
-          this.$store.dispatch('setUser', this.users[0]);
+            //   this.setUser(this.users[0]);
+            // console.log(this.users[0]);
           }
-          console.log(this.users[0]);
         })
         .catch(e => {
           console.log(e);
@@ -141,16 +142,23 @@ export default {
         .catch(e => {
           console.log(e);
         });
-    }
+    },
+     ...mapActions(['USERS/GET_USERS'])
   },
   mounted() {
     this.retrieveUsers();
+    this.$store.dispatch('USERS/GET_USERS');
   },
   computed:{
     getUser(){
-      let user = this.$store.state.user;
-      if (!user) user = new User('', '');
-      return user;
+      const users = this.$store.state.USERS.users;
+      if (users && users.length > 0)
+      {
+        return users[0];
+      }
+      else{
+        return new User('', '');
+      }
     }
   }
 };
