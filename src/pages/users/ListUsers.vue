@@ -60,7 +60,7 @@
         <li
           class="list-group-item"
           :class="{ active: index == currentIndex }"
-          v-for="(user, index) in users"
+          v-for="(user, index) in USERS"
           :key="index"
           @click="setActiveUser(user, index)"
         >
@@ -78,7 +78,7 @@
 <script>
 import Api from "../../services/http";
 import User from '@/models/User';
-import {  mapActions } from 'vuex';
+import {  mapActions, mapState } from 'vuex';
 export default {
   name: "ListUsersPage",
   data() {
@@ -91,6 +91,8 @@ export default {
   },
   methods: {
     retrieveUsers() {
+          this.$store.dispatch('USERS/GET_USERS');
+      /*
       Api.getUsers(true)
         .then(response => {
           this.users = response;
@@ -102,6 +104,7 @@ export default {
         .catch(e => {
           console.log(e);
         });
+        */
     },
     addUser(){
         this.$router.push({ path: "/users/adduser" });
@@ -147,10 +150,12 @@ export default {
   },
   mounted() {
     this.retrieveUsers();
-    this.$store.dispatch('USERS/GET_USERS');
   },
   computed:{
-    getUser(){
+ ...mapState({
+       USERS: state => state.USERS.users
+     })
+ ,getUser(){
       const users = this.$store.state.USERS.users;
       if (users && users.length > 0)
       {
